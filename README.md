@@ -54,15 +54,29 @@ A `sqli` spec should include
   - `error-control`: same as `sql`
 
 ## Setup
+### Docker (easiest)
+1. Generate a .env file with a random MYSQL_ROOT_PAASSWORD.
+```
+MYSQL_ROOT_PASSWORD=random_password
+```
+
+2. Start up the database and app server by running `docker-compose up`.
+3. Run the database setup.
+```sh
+docker exec -it sqli-tutorial_app_1 /bin/sh -c 'python /app/app/_setup.py root "$MYSQL_ROOT_PASSWORD"'
+```
+
+### Local
 Ensure mysql is running (on port 3306). Once `config.py` is appropriately setup,
 simply invoking the following from within `/app` will setup all appropriate
 users, databases, and schemas.
 
 ```
 python3 _setup.py <root username> <root password>
+
 ```
 
-## Running
+### Running
 The application can be run locally with the following from within `/app`. This will listen on port `5001`.
 ```
 python3 app.py
