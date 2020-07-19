@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sqli Tutorial</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="{{ url_for('static', filename='index.js') }}" defer></script>
+    </head>
+    <body>
+        <aside class="hidden">
+            <div class="widget clearfix"><span>Schema</span><span class="widget-icon">^</span></div>
+            <pre>{{ schema }}</pre>
+        </aside>
+        <main>
+            <div id="question">{{ question }}</div>
+            <form id="sql">{{ template | safe }}</form>
+            <button id="query">Query</button>
+            <div id="message" class="hidden"></div>
+            <div class="result-container">
+                <table><tbody id="result"></tbody></table>
+            </div>
+        </main>
+    </body>
+</html>

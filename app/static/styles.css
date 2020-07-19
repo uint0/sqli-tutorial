@@ -1,0 +1,134 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}td:not([align]),th:not([align]){text-align:left}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fafafa;
+    height: 100vh;
+    overflow-y: hidden;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 3rem;
+    position: absolute;
+    top: 4rem;
+    left: 4rem;
+}
+
+aside {
+    position: absolute;
+    bottom: 0;
+    left: 4rem;
+    background: white;
+}
+
+aside pre {
+    padding: 1rem;
+}
+
+aside.hidden {
+    top: calc(100vh - 2.75rem);
+}
+
+.widget {
+    padding: 0.75rem;
+    background-color: #5bc0de;
+    cursor: pointer;
+}
+
+.widget *:first-child {
+    float: left;
+}
+
+.widget *:last-child {
+    float: right;
+}
+
+main {
+    height: 100%;
+    width: 100%;
+}
+input {
+    border: 0;
+    border-bottom: 2px solid black;
+    background-color: transparent;
+}
+
+#question {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    margin-left: 7rem;
+    margin-right: 7rem;
+    text-align: center;
+}
+
+#sql {
+    font-size: 2rem;
+    color: #999;
+    font-family: monospace;
+    margin-bottom: 3rem;
+}
+
+#sql input {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+#message {
+    font-size: 1.5rem;
+    color: red;
+    font-family: monospace;
+    margin-top: 2rem;
+}
+
+#message.hidden {
+    display: none;
+}
+
+button {
+    font-size: 1.5rem;
+    padding: 0.75rem 2rem;
+    background-color: #5cb85c;
+    border: 0;
+    color: white;
+    cursor: pointer;
+}
+
+table {
+  border-collapse: collapse;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.result-container {
+  margin-top: 2em;
+  max-height: 20rem;
+  overflow-y: scroll;
+  width: 50%;
+}
+
+td, th {
+  padding: 6px;
+  text-align: left;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #ccc;
+}
+
+tbody tr:nth-child(odd) {
+    background-color: #ddd;
+}
+
+.clearfix:after {
+    content: ' ';
+    display: block;
+    height: 0;
+    clear: both;
+}

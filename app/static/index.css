@@ -1,0 +1,67 @@
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */html,body,p,ol,ul,li,dl,dt,dd,blockquote,figure,fieldset,legend,textarea,pre,iframe,hr,h1,h2,h3,h4,h5,h6{margin:0;padding:0}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*,*::before,*::after{box-sizing:inherit}img,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}td:not([align]),th:not([align]){text-align:left}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+main {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    margin-left: 15vw;
+    margin-right: 15vw;
+}
+
+[data-group] .title {
+    font-size: 2rem;
+    font-weight: bold;
+    float: left;
+}
+
+[data-group] .difficulty {
+    font-size: 1.5rem;
+    font-weight: normal;
+    color: #777;
+    float: right;
+}
+
+[data-group] .heading {
+    margin-top: 3rem;
+}
+
+[data-group] .flavor {
+    font-size: 1.25rem;
+    font-style: italic;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+[data-group] .levels {
+    display: flex;
+}
+
+[data-level] {
+    text-decoration: none;
+    color: black;
+    height: 5rem;
+    width: 9rem;
+    background: #eee;
+    border: 1px solid #ccc;
+    margin: 0.5rem;
+    padding: 0.25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+}
+
+.clearfix:after {
+    content: ' ';
+    display: block;
+    height: 0;
+    clear: both;
+}

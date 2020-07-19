@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sqli Tutorial</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+    </head>
+    <body>
+        <main>
+            <h1>SQLi Examples</h1>
+            {% for group in groups %}
+            <div data-group="{{ group['id'] }}">
+                <div class="heading clearfix">
+                    <span class="title">{{ group['name'] }}</span>
+                    <small class="difficulty">{{ group['difficulty'] }}</small>
+                </div>
+                <div class="flavor">{{ group['flavor'] }}</div>
+                <div class="levels">
+                    {% for level in group['levels'] %}
+                    <a data-level="{{ level['id'] }}" href="/?level={{ level['id'] }}">
+                        <div>{{ level['id'] + 1 }}. {{ level['name'] }}</div>
+                    </a>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </main>
+    </body>
+</html>
