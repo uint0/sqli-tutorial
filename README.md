@@ -48,7 +48,7 @@ A `sqli` spec should include
   - `show`: A dictionary containing an identifier followed by place holder text that should be shown to the user
     - e.g. `{'q0': 'Flag Id'}` will show a input with placeholder `Flag Id` to the user
        - Specifically at least the html `<input name="q0" placeholder="Flag Id">` will be generated
-  - template`: A sql query with `{identifier}`s corresponding to the identifiers in `show`. The user's inputs in `show` will be substituted here.
+  - `template`: A sql query with `{identifier}`s corresponding to the identifiers in `show`. The user's inputs in `show` will be substituted here.
   - `match`: same as `sql`
   - `flag`: same as `sql`
   - `error-control`: same as `sql`
@@ -63,7 +63,7 @@ python3 _setup.py <root username> <root password>
 ```
 
 ## Running
-The application can be run locally with. This will listen on port `5001`
+The application can be run locally with the following from within `/app`. This will listen on port `5001`.
 ```
 python3 app.py
 ```
