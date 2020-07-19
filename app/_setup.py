@@ -30,13 +30,13 @@ for name, spec in config.db_setup.items():
         cursor.execute(f"CREATE USER '{user}'@'%' IDENTIFIED BY '{password}'")
         cursor.execute(f"DROP DATABASE IF EXISTS {database}")
         cursor.execute(f"CREATE DATABASE {database}")
-        cursor.execute(f"GRANT ALL ON {database}.* TO '{user}'@'%'")
+        cursor.execute(f"GRANT SELECT ON {database}.* TO '{user}'@'%'")
 
     db_handle = pymysql.connect(
         host=config.db_host,
         port=3306,
-        user=user,
-        password=password,
+        user=argp.root_username,
+        password=argp.root_password,
         database=database
     )
     with db_handle.cursor() as cursor:
