@@ -1,0 +1,14 @@
+version: '2.4'
+
+services:
+  db:
+    image: mysql:8
+    environment:
+      - "MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}"
+  app:
+    build: "."
+    environment:
+      - "MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}"
+      - "MYSQL_HOST=db"
+
+

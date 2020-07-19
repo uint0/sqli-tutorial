@@ -1,8 +1,10 @@
+import os
+
 def get_password(user):
     # TODO: support per user passwords
     return 'password'
 
-db_host = 'localhost'
+db_host = os.getenv("MYSQL_HOST", "localhost")
 
 db_setup = {
     'blog': {
