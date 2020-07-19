@@ -73,7 +73,6 @@ users, databases, and schemas.
 
 ```
 python3 _setup.py <root username> <root password>
-
 ```
 
 ### Running

@@ -7,6 +7,8 @@ services:
       - "MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}"
   app:
     build: "."
+    ports:
+      - "5000:5000"
     environment:
       - "MYSQL_ROOT_PASSWORD=${MYSQL_ROOT_PASSWORD}"
       - "MYSQL_HOST=db"
